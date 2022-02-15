@@ -11,7 +11,7 @@ module "sec-grp-module" {
     source = "../modules/securitygroups"
     security_group_vpc_id = module.vpc-module.id_of_vpc
 }
-
+        
 module "ec2-module" {
   source = "../modules/ec2"
   vpc_sec_grp_id  = module.sec-grp-module.sg_id
