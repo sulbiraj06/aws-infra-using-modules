@@ -1,7 +1,7 @@
-/* Create a security group to allow port 22,80,443 */
+/* Create a security group to allow port 22 */
 resource "aws_security_group" "tf_sg_vpc" {
   name        = "allow_SSH_traffic"
-  description = "Allow web inbound traffic"
+  description = "Allow SSH inbound traffic"
   vpc_id      = var.security_group_vpc_id
 
     ingress {
